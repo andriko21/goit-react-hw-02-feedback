@@ -35,7 +35,7 @@ export default class App extends Component {
           options={["good", "neutral", "bad"]}
           leaveFeedback={this.onBtnClick}
         />
-        {this.countTotalFeedback(good,neutral,bad) < 0 ? <p>No feedback given</p> :
+        {this.countTotalFeedback(good,neutral,bad) === 0 ? <p>No feedback given</p> :
         <Statistics
           good={good}
           neutral={neutral}
