@@ -4,10 +4,15 @@ import Section from "./components/Section/Section.js";
 import { FeedbackOptions } from "./components/FeedbackOptions/FeedbackOptions.js";
 
 export default class App extends Component {
-  state = {
+  static defaultProps = {
     good: 0,
     neutral: 0,
     bad: 0,
+  }
+  state = {
+    good: this.props.good,
+    neutral: this.props.neutral,
+    bad: this.props.bad,
   };
 
   onBtnClick = (value) => {
